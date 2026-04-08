@@ -1,0 +1,1033 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Melis Ozgen | Network Marketing Egitmeni & Is Kocu</title>
+    <meta name="description" content="Melis Ozgen - Network marketing egitmeni, girisimci ve is kocu. Kendi isini kurmak isteyen kadinlara mentorluk ve egitim.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --black: #2d2d2d;
+            --dark: #f8f4f0;
+            --dark2: #fdf9f6;
+            --accent: #c47d8a;
+            --accent-deep: #a8596a;
+            --accent-light: #e8b4be;
+            --accent-gradient: linear-gradient(135deg, #c47d8a, #e8b4be, #d4949f);
+            --rose-gold: #b76e79;
+            --white: #ffffff;
+            --gray: #6b6b6b;
+            --light-gray: #9a9a9a;
+            --cream: #fdf9f6;
+            --soft-pink: #fef0f3;
+            --soft-lavender: #f5f0fa;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--white);
+            color: var(--black);
+            overflow-x: hidden;
+            line-height: 1.7;
+        }
+
+        h1, h2, h3, h4 { font-family: 'Playfair Display', serif; }
+
+        a { text-decoration: none; color: inherit; }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+        /* ── NAV ── */
+        nav {
+            position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+            background: rgba(255,255,255,0.92);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(196,125,138,0.15);
+            transition: all 0.3s ease;
+        }
+        nav .container {
+            display: flex; align-items: center; justify-content: space-between;
+            height: 70px;
+        }
+        .nav-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem; font-weight: 700;
+            background: var(--accent-gradient); -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent; background-clip: text;
+        }
+        .nav-links { display: flex; gap: 30px; list-style: none; }
+        .nav-links a {
+            font-size: 0.85rem; font-weight: 400; letter-spacing: 1px;
+            text-transform: uppercase; color: var(--gray);
+            transition: color 0.3s ease; position: relative;
+        }
+        .nav-links a:hover { color: var(--accent); }
+        .nav-links a::after {
+            content: ''; position: absolute; bottom: -4px; left: 0;
+            width: 0; height: 2px; background: var(--accent-gradient);
+            transition: width 0.3s ease; border-radius: 2px;
+        }
+        .nav-links a:hover::after { width: 100%; }
+        .nav-cta {
+            background: var(--accent-gradient); color: var(--white);
+            padding: 10px 24px; border-radius: 30px; font-weight: 600;
+            font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .nav-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(196,125,138,0.35);
+        }
+        .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; }
+        .hamburger span { width: 25px; height: 2px; background: var(--accent); transition: all 0.3s ease; }
+
+        /* ── HERO ── */
+        .hero {
+            min-height: 100vh; display: flex; align-items: center;
+            position: relative; overflow: hidden;
+            background: linear-gradient(135deg, #fef8fa 0%, #fdf5f0 40%, #f5f0fa 100%);
+        }
+        .hero::before {
+            content: ''; position: absolute; top: -50%; right: -20%;
+            width: 800px; height: 800px; border-radius: 50%;
+            background: radial-gradient(circle, rgba(196,125,138,0.08) 0%, transparent 70%);
+            animation: pulse 8s ease-in-out infinite;
+        }
+        .hero::after {
+            content: ''; position: absolute; bottom: -30%; left: -10%;
+            width: 600px; height: 600px; border-radius: 50%;
+            background: radial-gradient(circle, rgba(232,180,190,0.08) 0%, transparent 70%);
+            animation: pulse 10s ease-in-out infinite reverse;
+        }
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.5; }
+            50% { transform: scale(1.1); opacity: 1; }
+        }
+        .hero .container {
+            display: grid; grid-template-columns: 1fr 1fr;
+            gap: 60px; align-items: center; position: relative; z-index: 2;
+            padding-top: 80px;
+        }
+        .hero-content { animation: fadeInUp 1s ease; }
+        .hero-badge {
+            display: inline-block; padding: 8px 20px; border-radius: 30px;
+            border: 1px solid rgba(196,125,138,0.3);
+            font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px;
+            color: var(--accent); margin-bottom: 24px;
+            background: rgba(196,125,138,0.06);
+        }
+        .hero h1 {
+            font-size: 3.5rem; line-height: 1.15; margin-bottom: 20px;
+            font-weight: 700; color: var(--black);
+        }
+        .hero h1 span {
+            background: var(--accent-gradient); -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent; background-clip: text;
+        }
+        .hero p { color: var(--gray); font-size: 1.05rem; margin-bottom: 36px; max-width: 480px; }
+        .hero-buttons { display: flex; gap: 16px; flex-wrap: wrap; }
+        .btn-primary {
+            background: var(--accent-gradient); color: var(--white);
+            padding: 16px 36px; border-radius: 50px; font-weight: 600;
+            font-size: 0.9rem; letter-spacing: 0.5px;
+            transition: all 0.3s ease; border: none; cursor: pointer;
+            display: inline-flex; align-items: center; gap: 8px;
+        }
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(196,125,138,0.4);
+        }
+        .btn-secondary {
+            padding: 16px 36px; border-radius: 50px; font-weight: 500;
+            font-size: 0.9rem; letter-spacing: 0.5px;
+            border: 2px solid var(--accent-light); color: var(--accent-deep);
+            background: transparent; cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-flex; align-items: center; gap: 8px;
+        }
+        .btn-secondary:hover {
+            background: var(--soft-pink);
+            border-color: var(--accent);
+            transform: translateY(-3px);
+        }
+        .hero-image {
+            display: flex; justify-content: center; align-items: center;
+            animation: fadeInRight 1s ease 0.3s both;
+        }
+        .hero-image-wrapper {
+            width: 420px; height: 500px; border-radius: 20px; overflow: hidden;
+            position: relative;
+            border: 2px solid rgba(196,125,138,0.2);
+            background: linear-gradient(135deg, var(--soft-pink) 0%, var(--soft-lavender) 100%);
+            display: flex; align-items: center; justify-content: center;
+        }
+        .hero-image-wrapper::before {
+            content: ''; position: absolute; inset: -2px; border-radius: 22px;
+            background: var(--accent-gradient); z-index: -1; opacity: 0.25;
+        }
+        .hero-placeholder {
+            text-align: center; color: var(--gray); padding: 40px;
+        }
+        .hero-placeholder .initials {
+            width: 120px; height: 120px; border-radius: 50%;
+            background: var(--accent-gradient); color: var(--white);
+            display: flex; align-items: center; justify-content: center;
+            font-family: 'Playfair Display', serif; font-size: 2.5rem; font-weight: 700;
+            margin: 0 auto 20px;
+        }
+        .hero-placeholder p { font-size: 0.85rem; color: var(--gray); }
+        .hero-stats {
+            display: flex; gap: 40px; margin-top: 40px; padding-top: 30px;
+            border-top: 1px solid rgba(196,125,138,0.2);
+        }
+        .hero-stat h3 {
+            font-size: 2rem; font-weight: 700;
+            background: var(--accent-gradient); -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent; background-clip: text;
+        }
+        .hero-stat p { font-size: 0.8rem; color: var(--gray); margin-top: 4px; }
+
+        /* ── SECTION COMMON ── */
+        section { padding: 100px 0; }
+        .section-header { text-align: center; margin-bottom: 60px; }
+        .section-tag {
+            display: inline-block; font-size: 0.75rem; text-transform: uppercase;
+            letter-spacing: 3px; color: var(--accent); margin-bottom: 16px;
+        }
+        .section-header h2 { font-size: 2.5rem; margin-bottom: 16px; color: var(--black); }
+        .section-header h2 span {
+            background: var(--accent-gradient); -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent; background-clip: text;
+        }
+        .section-header p { color: var(--gray); max-width: 600px; margin: 0 auto; font-size: 1rem; }
+        .gold-line {
+            width: 60px; height: 2px; background: var(--accent-gradient);
+            margin: 16px auto; border-radius: 2px;
+        }
+
+        /* ── ABOUT ── */
+        .about { background: var(--cream); }
+        .about .container {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;
+        }
+        .about-image-area {
+            position: relative;
+        }
+        .about-card {
+            background: linear-gradient(135deg, var(--white) 0%, var(--soft-pink) 100%);
+            border: 1px solid rgba(196,125,138,0.15);
+            border-radius: 20px; padding: 50px; position: relative; overflow: hidden;
+            box-shadow: 0 10px 40px rgba(196,125,138,0.08);
+        }
+        .about-card::before {
+            content: '\201C'; position: absolute; top: 10px; left: 20px;
+            font-size: 8rem; font-family: 'Playfair Display', serif;
+            color: rgba(196,125,138,0.1); line-height: 1;
+        }
+        .about-text h2 { font-size: 2.2rem; margin-bottom: 20px; color: var(--black); }
+        .about-text h2 span {
+            background: var(--accent-gradient); -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent; background-clip: text;
+        }
+        .about-text p { color: var(--gray); margin-bottom: 16px; font-size: 0.95rem; }
+        .about-highlights {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 30px;
+        }
+        .about-highlight {
+            display: flex; align-items: center; gap: 12px;
+            padding: 14px 18px; border-radius: 12px;
+            background: rgba(196,125,138,0.06);
+            border: 1px solid rgba(196,125,138,0.12);
+        }
+        .about-highlight .icon {
+            width: 40px; height: 40px; border-radius: 50%;
+            background: var(--accent-gradient); display: flex;
+            align-items: center; justify-content: center;
+            font-size: 1.1rem; flex-shrink: 0; color: var(--white);
+        }
+        .about-highlight span { font-size: 0.85rem; font-weight: 500; color: var(--black); }
+
+        /* ── PRODUCTS ── */
+        .products { background: var(--white); }
+        .products-grid {
+            display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px;
+        }
+        .product-card {
+            background: var(--white);
+            border: 1px solid rgba(196,125,138,0.12);
+            border-radius: 20px; padding: 40px 28px; text-align: center;
+            transition: all 0.4s ease; position: relative; overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+        }
+        .product-card::before {
+            content: ''; position: absolute; top: 0; left: 0; right: 0;
+            height: 3px; background: var(--accent-gradient);
+            transform: scaleX(0); transition: transform 0.4s ease;
+        }
+        .product-card:hover::before { transform: scaleX(1); }
+        .product-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(196,125,138,0.3);
+            box-shadow: 0 20px 50px rgba(196,125,138,0.12);
+        }
+        .product-icon {
+            width: 80px; height: 80px; border-radius: 50%;
+            background: var(--soft-pink);
+            border: 1px solid rgba(196,125,138,0.15);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 2rem; margin: 0 auto 20px;
+        }
+        .product-card h3 { font-size: 1.3rem; margin-bottom: 12px; color: var(--black); }
+        .product-card p { color: var(--gray); font-size: 0.85rem; line-height: 1.6; }
+        .product-card .product-link {
+            display: inline-flex; align-items: center; gap: 6px;
+            color: var(--accent); font-size: 0.8rem; font-weight: 500;
+            margin-top: 20px; text-transform: uppercase; letter-spacing: 1px;
+            transition: gap 0.3s ease;
+        }
+        .product-card:hover .product-link { gap: 12px; }
+
+        /* ── WHY FARMASI ── */
+        .why-farmasi { background: linear-gradient(135deg, #fef8fa 0%, #f5f0fa 100%); }
+        .why-grid {
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px;
+        }
+        .why-card {
+            background: var(--white);
+            border: 1px solid rgba(196,125,138,0.1);
+            border-radius: 20px; padding: 40px 32px;
+            transition: all 0.3s ease; text-align: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+        }
+        .why-card:hover {
+            border-color: rgba(196,125,138,0.3);
+            transform: translateY(-5px);
+            box-shadow: 0 16px 40px rgba(196,125,138,0.1);
+        }
+        .why-number {
+            font-family: 'Playfair Display', serif; font-size: 3rem; font-weight: 700;
+            background: var(--accent-gradient); -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent; background-clip: text;
+            margin-bottom: 16px;
+        }
+        .why-card h3 { font-size: 1.2rem; margin-bottom: 12px; color: var(--black); }
+        .why-card p { color: var(--gray); font-size: 0.88rem; }
+
+        /* ── OPPORTUNITY ── */
+        .opportunity { background: var(--white); position: relative; overflow: hidden; }
+        .opportunity::before {
+            content: ''; position: absolute; top: 50%; left: 50%;
+            transform: translate(-50%,-50%);
+            width: 600px; height: 600px; border-radius: 50%;
+            background: radial-gradient(circle, rgba(196,125,138,0.06) 0%, transparent 70%);
+        }
+        .opp-content {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 60px;
+            align-items: center; position: relative; z-index: 2;
+        }
+        .opp-text h2 { font-size: 2.4rem; margin-bottom: 20px; line-height: 1.2; color: var(--black); }
+        .opp-text h2 span {
+            background: var(--accent-gradient); -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent; background-clip: text;
+        }
+        .opp-text > p { color: var(--gray); margin-bottom: 30px; font-size: 0.95rem; }
+        .opp-benefits { list-style: none; display: flex; flex-direction: column; gap: 16px; }
+        .opp-benefits li {
+            display: flex; align-items: flex-start; gap: 14px;
+            padding: 16px 20px; border-radius: 14px;
+            background: var(--soft-pink);
+            border: 1px solid rgba(196,125,138,0.1);
+        }
+        .opp-benefits .check {
+            width: 28px; height: 28px; border-radius: 50%;
+            background: var(--accent-gradient); display: flex;
+            align-items: center; justify-content: center;
+            font-size: 0.8rem; flex-shrink: 0; color: var(--white); font-weight: 700;
+        }
+        .opp-benefits h4 { font-family: 'Poppins', sans-serif; font-size: 0.95rem; font-weight: 600; margin-bottom: 2px; color: var(--black); }
+        .opp-benefits p { color: var(--gray); font-size: 0.82rem; }
+        .opp-visual {
+            display: flex; flex-direction: column; gap: 20px;
+        }
+        .opp-step {
+            display: flex; align-items: center; gap: 20px;
+            padding: 28px; border-radius: 16px;
+            background: var(--white);
+            border: 1px solid rgba(196,125,138,0.12);
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+        }
+        .opp-step:hover { border-color: rgba(196,125,138,0.3); transform: translateX(8px); box-shadow: 0 8px 30px rgba(196,125,138,0.1); }
+        .opp-step-num {
+            width: 50px; height: 50px; border-radius: 50%;
+            background: var(--accent-gradient); color: var(--white);
+            display: flex; align-items: center; justify-content: center;
+            font-family: 'Playfair Display', serif; font-size: 1.3rem; font-weight: 700;
+            flex-shrink: 0;
+        }
+        .opp-step h4 { font-family: 'Poppins', sans-serif; font-size: 1rem; font-weight: 600; margin-bottom: 4px; color: var(--black); }
+        .opp-step p { color: var(--gray); font-size: 0.82rem; }
+
+        /* ── TESTIMONIALS ── */
+        .testimonials { background: var(--cream); }
+        .testimonials-grid {
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+        }
+        .testimonial-card {
+            background: var(--white);
+            border: 1px solid rgba(196,125,138,0.1);
+            border-radius: 20px; padding: 36px; position: relative;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+        }
+        .testimonial-card::before {
+            content: '\201C'; position: absolute; top: 10px; right: 20px;
+            font-size: 5rem; font-family: 'Playfair Display', serif;
+            color: rgba(196,125,138,0.1); line-height: 1;
+        }
+        .testimonial-stars { color: var(--accent); font-size: 0.9rem; margin-bottom: 16px; letter-spacing: 2px; }
+        .testimonial-card p { color: var(--gray); font-size: 0.9rem; margin-bottom: 20px; font-style: italic; }
+        .testimonial-author { display: flex; align-items: center; gap: 14px; }
+        .testimonial-avatar {
+            width: 48px; height: 48px; border-radius: 50%;
+            background: var(--accent-gradient); display: flex;
+            align-items: center; justify-content: center;
+            font-weight: 700; color: var(--white); font-size: 1rem;
+        }
+        .testimonial-author h4 { font-family: 'Poppins', sans-serif; font-size: 0.9rem; font-weight: 600; color: var(--black); }
+        .testimonial-author span { color: var(--light-gray); font-size: 0.75rem; }
+
+        /* ── CONTACT / FORM ── */
+        .contact { background: linear-gradient(135deg, #fef8fa 0%, #f5f0fa 100%); }
+        .contact-wrapper {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start;
+        }
+        .contact-info h2 { font-size: 2.2rem; margin-bottom: 20px; color: var(--black); }
+        .contact-info h2 span {
+            background: var(--accent-gradient); -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent; background-clip: text;
+        }
+        .contact-info > p { color: var(--gray); margin-bottom: 30px; font-size: 0.95rem; }
+        .contact-methods { display: flex; flex-direction: column; gap: 16px; }
+        .contact-method {
+            display: flex; align-items: center; gap: 16px;
+            padding: 18px 22px; border-radius: 14px;
+            background: var(--white);
+            border: 1px solid rgba(196,125,138,0.1);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+        }
+        .contact-method .cm-icon {
+            width: 44px; height: 44px; border-radius: 50%;
+            background: var(--accent-gradient); display: flex;
+            align-items: center; justify-content: center;
+            font-size: 1.2rem; flex-shrink: 0; color: var(--white);
+        }
+        .contact-method span { font-size: 0.9rem; color: var(--gray); }
+        .contact-method strong { color: var(--black); }
+        .contact-form-area {
+            background: var(--white);
+            border: 1px solid rgba(196,125,138,0.12);
+            border-radius: 20px; padding: 40px;
+            box-shadow: 0 10px 40px rgba(196,125,138,0.08);
+        }
+        .contact-form-area h3 { font-size: 1.5rem; margin-bottom: 8px; color: var(--black); }
+        .contact-form-area > p { color: var(--gray); font-size: 0.85rem; margin-bottom: 28px; }
+        .form-group { margin-bottom: 18px; }
+        .form-group label {
+            display: block; font-size: 0.8rem; font-weight: 500;
+            margin-bottom: 8px; color: var(--black);
+        }
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%; padding: 14px 18px; border-radius: 12px;
+            border: 1px solid rgba(196,125,138,0.2);
+            background: var(--cream); color: var(--black);
+            font-family: 'Poppins', sans-serif; font-size: 0.9rem;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+            outline: none;
+        }
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(196,125,138,0.1);
+        }
+        .form-group select { cursor: pointer; }
+        .form-group select option { background: var(--white); }
+        .form-group textarea { resize: vertical; min-height: 80px; }
+        .form-submit {
+            width: 100%; padding: 16px; border-radius: 50px;
+            background: var(--accent-gradient); color: var(--white);
+            font-weight: 700; font-size: 1rem; border: none; cursor: pointer;
+            letter-spacing: 0.5px; transition: all 0.3s ease;
+            margin-top: 8px;
+        }
+        .form-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 35px rgba(196,125,138,0.35);
+        }
+        .whatsapp-btn {
+            display: flex; align-items: center; justify-content: center;
+            gap: 10px; width: 100%; padding: 16px; border-radius: 50px;
+            background: #25D366; color: var(--white); font-weight: 600;
+            font-size: 0.95rem; border: none; cursor: pointer;
+            margin-top: 14px; transition: all 0.3s ease;
+        }
+        .whatsapp-btn:hover {
+            background: #1ebe5d; transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(37,211,102,0.3);
+        }
+
+        /* ── FOOTER ── */
+        footer {
+            background: var(--black); border-top: 1px solid rgba(196,125,138,0.15);
+            padding: 50px 0 30px; color: var(--white);
+        }
+        .footer-content {
+            display: flex; justify-content: space-between; align-items: center;
+            flex-wrap: wrap; gap: 20px;
+        }
+        .footer-logo {
+            font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 700;
+            background: var(--accent-gradient); -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent; background-clip: text;
+        }
+        .footer-social { display: flex; gap: 12px; }
+        .footer-social a {
+            width: 42px; height: 42px; border-radius: 50%;
+            border: 1px solid rgba(232,180,190,0.3);
+            display: flex; align-items: center; justify-content: center;
+            transition: all 0.3s ease; font-size: 0.9rem; color: var(--white);
+        }
+        .footer-social a:hover {
+            background: var(--accent-gradient); color: var(--white);
+            border-color: transparent; transform: translateY(-3px);
+        }
+        .footer-bottom {
+            text-align: center; margin-top: 30px; padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #aaa; font-size: 0.75rem;
+        }
+
+        /* ── FLOATING WHATSAPP ── */
+        .floating-wp {
+            position: fixed; bottom: 30px; right: 30px; z-index: 999;
+            width: 60px; height: 60px; border-radius: 50%;
+            background: #25D366; display: flex; align-items: center;
+            justify-content: center; box-shadow: 0 6px 20px rgba(37,211,102,0.4);
+            transition: all 0.3s ease; cursor: pointer;
+            animation: bounceIn 0.6s ease;
+        }
+        .floating-wp:hover { transform: scale(1.1); box-shadow: 0 8px 30px rgba(37,211,102,0.5); }
+        .floating-wp svg { width: 30px; height: 30px; fill: white; }
+
+        /* ── ANIMATIONS ── */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInRight {
+            from { opacity: 0; transform: translateX(40px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        @keyframes bounceIn {
+            0% { transform: scale(0); }
+            60% { transform: scale(1.15); }
+            100% { transform: scale(1); }
+        }
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+
+        /* ── RESPONSIVE ── */
+        @media (max-width: 992px) {
+            .hero .container { grid-template-columns: 1fr; text-align: center; }
+            .hero p { margin: 0 auto 36px; }
+            .hero-buttons { justify-content: center; }
+            .hero-stats { justify-content: center; }
+            .hero-image { order: -1; }
+            .hero-image-wrapper { width: 280px; height: 340px; }
+            .hero h1 { font-size: 2.6rem; }
+            .about .container { grid-template-columns: 1fr; }
+            .about-highlights { grid-template-columns: 1fr 1fr; }
+            .products-grid { grid-template-columns: repeat(2, 1fr); }
+            .why-grid { grid-template-columns: 1fr; }
+            .opp-content { grid-template-columns: 1fr; }
+            .testimonials-grid { grid-template-columns: 1fr; }
+            .contact-wrapper { grid-template-columns: 1fr; }
+            .nav-links { display: none; }
+            .hamburger { display: flex; }
+            .nav-links.active {
+                display: flex; flex-direction: column;
+                position: absolute; top: 70px; left: 0; right: 0;
+                background: rgba(255,255,255,0.98); padding: 30px;
+                gap: 20px; border-bottom: 1px solid rgba(196,125,138,0.15);
+                backdrop-filter: blur(20px);
+            }
+        }
+        @media (max-width: 576px) {
+            .hero h1 { font-size: 2rem; }
+            .hero-stats { flex-direction: column; gap: 16px; align-items: center; }
+            .products-grid { grid-template-columns: 1fr; }
+            .about-highlights { grid-template-columns: 1fr; }
+            section { padding: 70px 0; }
+            .section-header h2 { font-size: 1.8rem; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+    <div class="container">
+        <a href="#" class="nav-logo">Melis Ozgen</a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#about">Hakkimda</a></li>
+            <li><a href="#services">Egitimler</a></li>
+            <li><a href="#why">Neden Ben</a></li>
+            <li><a href="#opportunity">Is Firsati</a></li>
+            <li><a href="#testimonials">Basarilar</a></li>
+        </ul>
+        <a href="#contact" class="nav-cta">Iletisime Gec</a>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+    <div class="container">
+        <div class="hero-content">
+            <span class="hero-badge">Network Marketing Egitmeni</span>
+            <h1>Hayalindeki <span>Isini Kur,</span> Ozgurce Yasa</h1>
+            <p>Network marketing dunyasinda kendi isini kurmak, finansal ozgurlugune kavusmak ve lider bir girisimci olmak istiyorsan dogru yerdesin.</p>
+            <div class="hero-buttons">
+                <a href="#services" class="btn-primary">Ucretsiz Egitim Al &#10140;</a>
+                <a href="#contact" class="btn-secondary">Benimle Calis &#9733;</a>
+            </div>
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <h3>500+</h3>
+                    <p>Egitim Alani</p>
+                </div>
+                <div class="hero-stat">
+                    <h3>150+</h3>
+                    <p>Aktif Ekip Uyesi</p>
+                </div>
+                <div class="hero-stat">
+                    <h3>7+</h3>
+                    <p>Yil Deneyim</p>
+                </div>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="hero-image-wrapper">
+                <div class="hero-placeholder">
+                    <div class="initials">MO</div>
+                    <p>Melis Ozgen<br><small style="color:var(--accent)">Fotograf eklenecek</small></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+    <div class="container">
+        <div class="about-image-area reveal">
+            <div class="about-card">
+                <p style="font-size:1.1rem; font-style:italic; color:var(--accent-deep); margin-bottom:20px;">
+                    "Her kadin kendi hayatinin CEO'su olabilir. Tek ihtiyaci dogru rehberlik ve cesaret."
+                </p>
+                <p style="color:var(--gray); font-size:0.9rem;">
+                    Yillar once sifirdan basladim. Hicbir is deneyimim, sermayem yoktu. Ama bir hayalim vardi: kendi isimin patronu olmak. Network marketing bana bu kapiyi acti. Simdi ayni yolculukta yuzlerce kadina rehberlik ediyorum.
+                </p>
+            </div>
+        </div>
+        <div class="about-text reveal">
+            <span class="section-tag">Hakkimda</span>
+            <h2>Merhaba, ben <span>Melis Ozgen</span></h2>
+            <p>Network marketing egitmeni, girisimci ve is kocu olarak yuzlerce kisiye kendi islerini kurmalari, ekiplerini buyutmeleri ve finansal bagimsizliklarini kazanmalari icin mentorluk yapiyorum.</p>
+            <p>Amacim, ozellikle kadinlarin potansiyellerini kesfetmelerini saglamak, dogru stratejilerle gelir uretmelerini ve lider birer girisimci olmalarini desteklemek.</p>
+            <div class="about-highlights">
+                <div class="about-highlight">
+                    <div class="icon">&#9733;</div>
+                    <span>7+ Yil NM Deneyimi</span>
+                </div>
+                <div class="about-highlight">
+                    <div class="icon">&#9825;</div>
+                    <span>500+ Kisi Egitildi</span>
+                </div>
+                <div class="about-highlight">
+                    <div class="icon">&#9880;</div>
+                    <span>Liderlik & Strateji Kocu</span>
+                </div>
+                <div class="about-highlight">
+                    <div class="icon">&#10003;</div>
+                    <span>Kanitlanmis Basari Sistemi</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SERVICES / EGITIMLER -->
+<section class="products" id="services">
+    <div class="container">
+        <div class="section-header reveal">
+            <span class="section-tag">Egitim & Mentorluk</span>
+            <h2>Sana Ozel <span>Egitim Programlari</span></h2>
+            <div class="gold-line"></div>
+            <p>Network marketing'de basari icin ihtiyacin olan tum bilgi, strateji ve destegi sana sunuyorum.</p>
+        </div>
+        <div class="products-grid">
+            <div class="product-card reveal">
+                <div class="product-icon">&#127891;</div>
+                <h3>Baslangic Egitimi</h3>
+                <p>Network marketing'e sifirdan baslayanlar icin. Is modelini anla, ilk adimlarini at, hemen kazanmaya basla.</p>
+                <span class="product-link">Detay &#8594;</span>
+            </div>
+            <div class="product-card reveal">
+                <div class="product-icon">&#128200;</div>
+                <h3>Satis & Pazarlama</h3>
+                <p>Sosyal medya stratejileri, icerik uretimi, hikaye anlatimi ve dijital pazarlama teknikleri.</p>
+                <span class="product-link">Detay &#8594;</span>
+            </div>
+            <div class="product-card reveal">
+                <div class="product-icon">&#128101;</div>
+                <h3>Ekip Kurma & Liderlik</h3>
+                <p>Ekibini nasil buyutursun, liderlik becerilerin, motivasyon ve takip sistemleri.</p>
+                <span class="product-link">Detay &#8594;</span>
+            </div>
+            <div class="product-card reveal">
+                <div class="product-icon">&#128176;</div>
+                <h3>Gelir Stratejileri</h3>
+                <p>Pasif gelir olusturma, kazanc planini anlama, hedef belirleme ve gelirini katlama yollari.</p>
+                <span class="product-link">Detay &#8594;</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- WHY ME -->
+<section class="why-farmasi" id="why">
+    <div class="container">
+        <div class="section-header reveal">
+            <span class="section-tag">Fark Yaratan Yaklasim</span>
+            <h2>Neden <span>Benimle Calismasin?</span></h2>
+            <div class="gold-line"></div>
+            <p>Sadece bilgi vermiyorum, seninle birlikte yuruyorum. Iste beni farkli kilan 6 neden.</p>
+        </div>
+        <div class="why-grid">
+            <div class="why-card reveal">
+                <div class="why-number">01</div>
+                <h3>Sahada Kanitlanmis Sistem</h3>
+                <p>Teoriyle degil, bizzat yasayarak ogrendigim ve sonuc alan bir basari sistemi paylasiyorum.</p>
+            </div>
+            <div class="why-card reveal">
+                <div class="why-number">02</div>
+                <h3>Bire Bir Mentorluk</h3>
+                <p>Seni dinliyor, sana ozel strateji olusturuyor ve her adimda yaninda oluyorum.</p>
+            </div>
+            <div class="why-card reveal">
+                <div class="why-number">03</div>
+                <h3>Dijital Pazarlama Egitimi</h3>
+                <p>Sosyal medya, icerik uretimi, marka olusturma ve online satis stratejileri ogretiyorum.</p>
+            </div>
+            <div class="why-card reveal">
+                <div class="why-number">04</div>
+                <h3>Guclu Topluluk</h3>
+                <p>Birbirini destekleyen, motive eden ve buyuten bir kadin girisimci toplulugunun parcasi ol.</p>
+            </div>
+            <div class="why-card reveal">
+                <div class="why-number">05</div>
+                <h3>Mindset & Kisisel Gelisim</h3>
+                <p>Basari sadece strateji degil. Dogru dusunce yapisi, ozguven ve liderlik zihniyeti gelistiriyoruz.</p>
+            </div>
+            <div class="why-card reveal">
+                <div class="why-number">06</div>
+                <h3>Esnek & Sinirsiz Gelir</h3>
+                <p>Evinden, telefonundan, istedigin yerden calis. Kendi saatlerini belirle, gelirinin sinirini sen koy.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- OPPORTUNITY -->
+<section class="opportunity" id="opportunity">
+    <div class="container">
+        <div class="opp-content">
+            <div class="opp-text reveal">
+                <span class="section-tag">Is Firsati</span>
+                <h2>Kendi Isinin <span>Patronu</span> Ol</h2>
+                <p>Network marketing, dogru egitim ve dogru mentorle dunya uzerinde en hizli buyuyen is modellerinden biri. Sermayesiz, risksiz, evinden basla.</p>
+                <ul class="opp-benefits">
+                    <li>
+                        <div class="check">&#10003;</div>
+                        <div>
+                            <h4>Sermaye Gerektirmez</h4>
+                            <p>Dukkan, ofis, stok yok. Telefonun ve interneting yeterli.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="check">&#10003;</div>
+                        <div>
+                            <h4>Zaman Ozgurlugu</h4>
+                            <p>9-5 mesai yok. Kendi saatlerini sen belirle, cocugunla vakit gecir.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="check">&#10003;</div>
+                        <div>
+                            <h4>Katlanan Gelir Modeli</h4>
+                            <p>Ekibin buyudukce gelirin de buyur. Pasif gelir olusturma firsati.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="check">&#10003;</div>
+                        <div>
+                            <h4>Tam Destek & Egitim</h4>
+                            <p>Seni yalniz birakmiyorum. Adim adim mentorluk ve egitim programi.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="opp-visual reveal">
+                <div class="opp-step">
+                    <div class="opp-step-num">1</div>
+                    <div>
+                        <h4>Benimle Iletisime Gec</h4>
+                        <p>Ucretsiz kesfet gorusmesiyle sana uygun yol haritasini cikaralim.</p>
+                    </div>
+                </div>
+                <div class="opp-step">
+                    <div class="opp-step-num">2</div>
+                    <div>
+                        <h4>Egitim Programina Basla</h4>
+                        <p>Ozel egitim iceriklerine eris, temel bilgileri ogren.</p>
+                    </div>
+                </div>
+                <div class="opp-step">
+                    <div class="opp-step-num">3</div>
+                    <div>
+                        <h4>Ilk Adimlarini At</h4>
+                        <p>Birlikte strateji olustur, sosyal medyanda varligini guclendir.</p>
+                    </div>
+                </div>
+                <div class="opp-step">
+                    <div class="opp-step-num">4</div>
+                    <div>
+                        <h4>Buyumeye Basla</h4>
+                        <p>Ekibini kur, gelirini artir ve finansal ozgurlugunun tadini cikar.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials" id="testimonials">
+    <div class="container">
+        <div class="section-header reveal">
+            <span class="section-tag">Basari Hikayeleri</span>
+            <h2>Ekibimden <span>Gercek Sesler</span></h2>
+            <div class="gold-line"></div>
+            <p>Benimle calisan girisimcilerin gercek deneyimleri ve donusum hikayeleri.</p>
+        </div>
+        <div class="testimonials-grid">
+            <div class="testimonial-card reveal">
+                <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p>Melis'in egitimleri hayatimi degistirdi. Hicbir seyden anlamiyordum, 3 ayda ilk gelirimi elde ettim. Simdi kendi ekibimi yonetiyorum!</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">AK</div>
+                    <div>
+                        <h4>Ayse K.</h4>
+                        <span>Ekip Lideri, 8 ay</span>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card reveal">
+                <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p>Ev hanimiydim, kendime guvenimim yoktu. Melis bana hem is ogretti hem ozguvenimi kazandirdi. Simdi hem anne hem girisimciyim.</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">ZD</div>
+                    <div>
+                        <h4>Zeynep D.</h4>
+                        <span>Girisimci, 1 yil</span>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card reveal">
+                <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p>Sosyal medya stratejileri ve satis egitimi inanilmazdi. Melis sadece mentor degil, gercek bir lider. Yaninda olmak ayri bir motivasyon.</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">EB</div>
+                    <div>
+                        <h4>Elif B.</h4>
+                        <span>Dijital Pazarlamaci, 6 ay</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+    <div class="container">
+        <div class="contact-wrapper">
+            <div class="contact-info reveal">
+                <span class="section-tag">Iletisim</span>
+                <h2>Hemen <span>Baglanalim</span></h2>
+                <p>Egitimler hakkinda bilgi almak, ucretsiz kesfet gorusmesi yapmak veya ekibime katilmak icin hemen yaz.</p>
+                <div class="contact-methods">
+                    <div class="contact-method">
+                        <div class="cm-icon">&#128222;</div>
+                        <div>
+                            <strong>Telefon</strong><br>
+                            <span style="color:var(--gray)">+90 5XX XXX XX XX</span>
+                        </div>
+                    </div>
+                    <div class="contact-method">
+                        <div class="cm-icon">&#9993;</div>
+                        <div>
+                            <strong>E-posta</strong><br>
+                            <span style="color:var(--gray)">melis@ornekmail.com</span>
+                        </div>
+                    </div>
+                    <div class="contact-method">
+                        <div class="cm-icon">&#128247;</div>
+                        <div>
+                            <strong>Instagram</strong><br>
+                            <span style="color:var(--gray)">@melisozgen</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-form-area reveal">
+                <h3>Ucretsiz Kesfet Gorusmesi</h3>
+                <p>Formu doldur, sana en uygun yol haritasini birlikte cikaralim.</p>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Ad Soyad *</label>
+                        <input type="text" id="name" name="name" placeholder="Adiniz ve soyadiniz" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-posta *</label>
+                        <input type="email" id="email" name="email" placeholder="ornek@mail.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Telefon *</label>
+                        <input type="tel" id="phone" name="phone" placeholder="05XX XXX XX XX" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="interest">Ilgi Alaniniz</label>
+                        <select id="interest" name="interest">
+                            <option value="">Seciniz...</option>
+                            <option value="training">Egitim programlari hakkinda bilgi istiyorum</option>
+                            <option value="join">Ekibe katilmak istiyorum</option>
+                            <option value="mentoring">Bire bir mentorluk istiyorum</option>
+                            <option value="info">Genel bilgi almak istiyorum</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mesajiniz</label>
+                        <textarea id="message" name="message" placeholder="Mesajinizi yazin..."></textarea>
+                    </div>
+                    <button type="submit" class="form-submit">Gonder &#10140;</button>
+                </form>
+                <a href="https://wa.me/905XXXXXXXXX?text=Merhaba%20Melis%20Hanim%2C%20egitim%20programlari%20hakkinda%20bilgi%20almak%20istiyorum." class="whatsapp-btn" target="_blank" rel="noopener">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.611.611l4.458-1.495A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.34 0-4.508-.693-6.34-1.882l-.442-.277-3.148 1.055 1.055-3.148-.277-.442A9.935 9.935 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+                    WhatsApp ile Yaz
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-logo">Melis Ozgen</div>
+            <div class="footer-social">
+                <a href="#" aria-label="Instagram">&#128247;</a>
+                <a href="#" aria-label="Facebook">f</a>
+                <a href="#" aria-label="YouTube">&#9654;</a>
+                <a href="#" aria-label="TikTok">&#9835;</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Melis Ozgen - Network Marketing Egitmeni & Girisimci. Tum haklari saklidir.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- FLOATING WHATSAPP -->
+<a href="https://wa.me/905XXXXXXXXX?text=Merhaba%20Melis%20Hanim%2C%20ekibinize%20katilmak%20istiyorum." class="floating-wp" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.611.611l4.458-1.495A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.34 0-4.508-.693-6.34-1.882l-.442-.277-3.148 1.055 1.055-3.148-.277-.442A9.935 9.935 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+</a>
+
+<script>
+    // Mobile menu toggle
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+    hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    });
+    // Close menu on link click
+    navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => navLinks.classList.remove('active'));
+    });
+
+    // Scroll reveal
+    const reveals = document.querySelectorAll('.reveal');
+    const revealOnScroll = () => {
+        reveals.forEach(el => {
+            const top = el.getBoundingClientRect().top;
+            if (top < window.innerHeight - 80) {
+                el.classList.add('active');
+            }
+        });
+    };
+    window.addEventListener('scroll', revealOnScroll);
+    revealOnScroll();
+
+    // Form submission
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const btn = this.querySelector('.form-submit');
+        const originalText = btn.textContent;
+        btn.textContent = 'Gonderiliyor...';
+        btn.style.opacity = '0.7';
+        setTimeout(() => {
+            btn.textContent = 'Basariyla Gonderildi! ✓';
+            btn.style.background = '#25D366';
+            btn.style.color = '#fff';
+            setTimeout(() => {
+                btn.textContent = originalText;
+                btn.style.background = '';
+                btn.style.color = '';
+                btn.style.opacity = '';
+                this.reset();
+            }, 3000);
+        }, 1500);
+    });
+
+    // Nav background on scroll
+    window.addEventListener('scroll', () => {
+        const nav = document.querySelector('nav');
+        if (window.scrollY > 50) {
+            nav.style.boxShadow = '0 4px 30px rgba(0,0,0,0.3)';
+        } else {
+            nav.style.boxShadow = 'none';
+        }
+    });
+</script>
+
+</body>
+</html>
